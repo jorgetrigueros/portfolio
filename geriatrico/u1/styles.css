@@ -1,0 +1,148 @@
+/* A CLASS ----------------------------------------------------------------------------- */
+A:link {
+	FONT-SIZE: 9px; COLOR: #FFFFFF; FONT-FAMILY: tahoma, sans-serif; TEXT-DECORATION: none; font-weight: bold
+}
+A:visited {
+	FONT-SIZE: 9px; COLOR: #FFFFFF; FONT-FAMILY: tahoma, sans-serif; TEXT-DECORATION: none; font-weight: bold
+}
+A:active {
+	FONT-SIZE: 9px; COLOR: #FFFFFF; FONT-FAMILY: tahoma, sans-serif; TEXT-DECORATION: none; font-weight: bold
+}
+A:hover {
+	FONT-SIZE: 9px; COLOR: #FFF200; FONT-FAMILY: tahoma, sans-serif; TEXT-DECORATION: none; font-weight: bold
+}
+A.links:link {
+	FONT-SIZE: 12px; COLOR: #368732; FONT-FAMILY: arial, sans-serif; TEXT-DECORATION: none; font-weight: normal
+}
+A.links:visited {
+	FONT-SIZE: 12px; COLOR: #368732; FONT-FAMILY: arial, sans-serif; TEXT-DECORATION: none; font-weight: normal
+}
+A.links:active {
+	FONT-SIZE: 12px; COLOR: #368732; FONT-FAMILY: arial, sans-serif; TEXT-DECORATION: none; font-weight: normal
+}
+A.links:hover {
+	FONT-SIZE: 12px; COLOR: #368732; FONT-FAMILY: arial, sans-serif; TEXT-DECORATION: underline; font-weight: normal
+}
+/* END A CLASS -------------------------------------------------------------------------- */
+/* TD CLASS ----------------------------------------------------------------------------- */
+
+TD.
+{
+	font-family:Arial;
+	font-size:12px;
+	font-weight: normal;
+	color: #000000;
+}
+TD.subtitulo
+{
+	font-family:Arial;
+	font-size:12px;
+	font-weight: bold;
+	color: #368732;
+	background-image: url(images/subtitulo.gif);
+	height: 23px;
+	width: 470px;
+	padding-left: 20px;
+	vertical-align: middle;
+	border: 1px solid #00C417;
+
+}
+TD.footer
+{
+	font-family:Arial;
+	font-size:12px;
+	font-weight: bold;
+	color: #368732;
+	background-image: url(images/footer.gif);
+	height: 23px;
+	width: 470px;
+	padding-left: 20px;
+	vertical-align: middle;
+	border: 1px solid #00C417;
+
+}
+TD.contenido
+{
+	background-image: url(images/sombracont.gif);
+	border: 1px solid #A6A69D;
+	background-repeat: no-repeat;
+	padding: 10px;
+	width: 630px;
+
+
+
+}
+TD.recuadro
+{
+	border: 1px solid #00C417;
+	padding: 10px;
+
+}
+/* END SELECT CLASS -------------------------------------------------------------------------- */
+/* SELECT CLASS ----------------------------------------------------------------------------- */
+SELECT
+{
+	font-family:tahoma;
+	font-size:10px;
+}
+/* END SELECT CLASS -------------------------------------------------------------------------- */
+/* INPUT CLASS ----------------------------------------------------------------------------- */
+INPUT.boton
+{
+	font-family:Arial;
+	font-size:12px;
+	color: #000000;
+	border: 1px solid #000000;
+	background-color: #FFCC00;
+	font-weight: bold;
+	padding: 4px;
+}
+/* END SELECT CLASS -------------------------------------------------------------------------- */
+/* SPAN CLASS ----------------------------------------------------------------------------- */
+.titulo {
+	font-size:16px; color:#177513; font-family:Arial, Sans-Serif; text-decoration: none; font-weight: bold;
+}
+.subtitulo_negro {
+	font-size:12px; color:#000000; font-family:Arial, Sans-Serif; text-decoration: none; font-weight: bold;
+}
+.tahoma9 {
+	FONT-SIZE: 9px; COLOR: #FFFFFF; FONT-FAMILY: tahoma, sans-serif; TEXT-DECORATION: none; font-weight: bold
+}
+.bordefotos
+{
+	border: 1px solid #00C417;
+}
+.resaltado {
+	font-size:12px; color:#368732; font-family:Arial, Sans-Serif; text-decoration: none; font-weight: bold;
+}
+/* END SPAN CLASS -------------------------------------------------------------------------- */
+/* FONT CLASS ----------------------------------------------------------------------------- */
+FONT
+{	
+	font-family:arial;
+	font-size:12px;
+}
+P
+{	
+	font-family:arial;
+	font-size:12px;
+}
+LI
+{	
+	font-family:arial;
+	font-size:12px;
+	list-style-image:url(images/flecha.gif);
+}
+LI LI
+{	
+	font-family:arial;
+	font-size:12px;
+	list-style-image:url(images/puntito.gif);
+}
+LI.hablar
+{	
+	font-family:arial;
+	font-size:12px;
+	list-style-image:url(images/hablar.gif);
+}
+/* FONT SPAN CLASS -------------------------------------------------------------------------- */
