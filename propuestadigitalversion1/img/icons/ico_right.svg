@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="28px" viewBox="0 0 18 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>ico_right</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
+        <g id="foto" transform="translate(-1306.000000, -526.000000)" stroke="#EFEFEF" stroke-width="4">
+            <g id="photo-slider">
+                <path d="M1304.5,534.5 L1315,546 M1325.5,534.5 L1315,546" id="ico_right" transform="translate(1315.000000, 540.000000) rotate(-90.000000) translate(-1315.000000, -540.000000) "></path>
+            </g>
+        </g>
+    </g>
+</svg>
