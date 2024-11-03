@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Astara postventa</title>
+  <link rel="icon" href="https://astara.com/favicon-32x32.png" />
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+
+<body>
+
+  <header class="main-header">
+    <a href="#" target="_blank" aria-label="Mitsubishi Motors" class="main-header__logo"></a>
+    <input type="checkbox" name="menu" id="menu-button-check">
+    <label aria-label="Abrir y cerrar menú principal" for="menu-button-check">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+    <div class="menu">
+      <ul>
+        <li><a href="#" class="icon-book-b" title="Conoce todas nuestas propuestas">Propuestas</a></li>
+        <li><a href="#" class="icon-download-b" title="Accede a nuestro centro de descargas">Centro de descargas</a>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="main-container">
+    <section class="section-opening area-1">
+      <h2 class="sr-only">Welcome toTu presupuesto</h2>
+      <div class="container">
+        <article class="color-box color-box--black">
+          <h3 class="font-size-title-md mb-4">Hola <strong>Patricia González.</strong></h3>
+          <p class="font-weight-light line-height-md is-chain">Este es el presupuesto que nos has solicitado.</p>
+          <p class="is-chain"> En caso de duda estamos a tu disposición para atenderte.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section-vehicle area-2">
+
+      <h1 class="sr-only">Información del vehículo</h1>
+      <div class="container">
+        <figure class="pic">
+          <img src="assets/img/vehiculo.png" alt="Mitsubishi ASX">
+        </figure>
+
+        <article class="vehicle-info car mb-4">
+          <h2 class="title title--main mb-4">Mitsubishi ASX</h2>
+          <dl class="d-flex">
+            <dt class="pr-1">VIN:</dt>
+            <dd>123456789101112</dd>
+          </dl>
+          <dl class="d-flex">
+            <dt class="pr-1">Nº Presupuesto:</dt>
+            <dd>998232334</dd>
+          </dl>
+          <dl class="d-flex">
+            <dt class="pr-1">Orden de compra:</dt>
+            <dd>009878</dd>
+          </dl>
+          <dl class="d-flex">
+            <dt class="pr-1">Fecha:</dt>
+            <dd>04/10/2022</dd>
+          </dl>
+        </article>
+
+
+        <article class="info-block user mb-5" aria-label="Información del cliente">
+          <span class="icon-user-info icon-area" role="img" aria-hidden="true"></span>
+          <div class="info-area">
+            <h2 class="title">Patricia González.</h2>
+            <dl class="d-flex">
+              <dt class="d-none" aria-hidden="true"></dt>
+              <dd title="Dirección">Avda. de Asturias 25; 1ºB, 28934 (Madrid)</dd>
+            </dl>
+
+            <dl class="d-flex">
+              <dt class="pr-1">DNI:</dt>
+              <dd>50231554R</dd>
+            </dl>
+
+            <dl class="d-flex">
+              <dt class="pr-1">Teléfono Contacto:</dt>
+              <dd>657899002</dd>
+            </dl>
+
+            <dl class="d-flex">
+              <dt class="pr-1">Email:</dt>
+              <dd>juangarmon@gmail.com</dd>
+            </dl>
+
+          </div>
+        </article>
+
+        <article class="info-block budget mb-5" aria-label="Información concesionario">
+          <span class="icon-dealer icon-area" role="img" aria-hidden="true"></span>
+          <div class="info-area">
+            <h2 class="title">B&M Automóviles Retail, S.L.</h2>
+            <dl class="d-flex">
+              <dt class="d-none" aria-hidden="true"></dt>
+              <dd title="Dirección">C/ Concha Espina, nº 24, 28016 (Madrid)</dd>
+            </dl>
+
+            <dl class="d-flex">
+              <dt class="pr-1">DNI:</dt>
+              <dd>50231554R</dd>
+            </dl>
+
+            <dl class="d-flex">
+              <dt class="pr-1">Teléfono Contacto:</dt>
+              <dd>657899002</dd>
+            </dl>
+
+            <dl class="d-flex">
+              <dt class="pr-1">Email:</dt>
+              <dd>retail.ventas@red-mitsubishi.com</dd>
+            </dl>
+          </div>
+        </article>
+      </div>
+    </section>
+    <section class="section-budget area-3 mb-7">
+      <h2 class="sr-only">Presupuesto</h2>
+      <div id="shadowContainer" class="shadow-box mb-7">
+        <div class="budget-block__header">
+          <span class="area-1">Producto</span>
+          <span class="area-2">Cantidad</span>
+          <span class="area-3">PVP</span>
+          <span class="area-4">Descuentos</span>
+          <span class="area-5">Importe neto</span>
+          <span class="area-6">Impuestos</span>
+          <span class="area-7">Importe final</span>
+        </div>
+        <article class="budget-block">
+          <h2 class="product-title area-1" aria-label="Nombre del producto">Radio Card Play</h2>
+          <span class="product-code area-2" title="Código del producto">Cod: AVOONMA</span>
+
+          <span class="area-3 d-none-lg">Cantidad</span>
+          <span class="product-info area-4"> 01</span>
+
+          <span class="area-5 d-none-lg">PVP</span>
+          <span class="product-info area-6">300,76€</span>
+
+          <span class="area-7 d-none-lg">Descuentos</span>
+          <span class="product-info area-8">-31,38€</span>
+
+          <span class="product-info is-mobile-hidden area-9" title="Importe neto producto">281,85€</span>
+          <span class="product-info is-mobile-hidden area-10" title="Cantidad de impuestos en el producto">53,55€</span>
+          <span class="product-info is-mobile-hidden area-11" title="Importe final del producto">335,41€</span>
+        </article>
+        <article class="budget-block">
+          <h2 class="product-title area-1" aria-label="Nombre del producto">Radio Card Play</h2>
+          <span class="product-code area-2" title="Código del producto">Cod: AVOONMA</span>
+
+          <span class="area-3 d-none-lg">Cantidad</span>
+          <span class="product-info area-4"> 01</span>
+
+          <span class="area-5 d-none-lg">PVP</span>
+          <span class="product-info area-6">300,76€</span>
+
+          <span class="area-7 d-none-lg">Descuentos</span>
+          <span class="product-info area-8">-31,38€</span>
+
+          <span class="product-info is-mobile-hidden area-9" title="Importe neto producto">281,85€</span>
+          <span class="product-info is-mobile-hidden area-10" title="Cantidad de impuestos en el producto">53,55€</span>
+          <span class="product-info is-mobile-hidden area-11" title="Importe final del producto">335,41€</span>
+        </article>
+        <article class="budget-block">
+          <h2 class="product-title area-1" aria-label="Nombre del producto">Radio Card Play</h2>
+          <span class="product-code area-2" title="Código del producto">Cod: AVOONMA</span>
+
+          <span class="area-3 d-none-lg">Cantidad</span>
+          <span class="product-info area-4"> 01</span>
+
+          <span class="area-5 d-none-lg">PVP</span>
+          <span class="product-info area-6">300,76€</span>
+
+          <span class="area-7 d-none-lg">Descuentos</span>
+          <span class="product-info area-8">-31,38€</span>
+
+          <span class="product-info is-mobile-hidden area-9" title="Importe neto producto">281,85€</span>
+          <span class="product-info is-mobile-hidden area-10" title="Cantidad de impuestos en el producto">53,55€</span>
+          <span class="product-info is-mobile-hidden area-11" title="Importe final del producto">335,41€</span>
+        </article>
+
+        <article class="budget-block__total">
+          <div class="budget-info">
+            <h2 class="budget-info__title area-1" aria-label="Cantidad total del presupuesto">TOTAL</h2>
+            <dl class="subtotal area-2">
+              <dt>Subtotal</dt>
+              <dd>10.500,17 €</dd>
+            </dl>
+            <dl class="discount area-3" aria-label="Descuento">
+              <dt>Black friday</dt>
+              <dd>-1.300.00 €</dd>
+            </dl>
+            <dl class="total area-4">
+              <dt>Importe Final: </dt>
+              <dd>9.200,17 €</dd>
+            </dl>
+          </div>
+        </article>
+
+      </div>
+      <div class="container">
+        <div class="grid-box-3">
+          <div class="d-flex flex-column area-1">
+            <img class="d-none d-block-lg mb-auto" src="/assets/img/budget-guy.png" alt="Descargar presupuesto"
+              aria-hidden="true">
+            <button class="btn btn--budget icon-pdf-b has-icon">Descargar presupuesto</button>
+          </div>
+
+          <article class="color-box color-box--green area-2" aria-label="Mensaje del concesionario">
+            <p class="is-chain d-flex align-items-center">
+              <span class="icon-message font-size-icon-md mr-2" role="img" aria-hidden="true"></span>Hola Patricia
+              Gonzalez,
+            </p>
+            <p class="is-chain">Estimamos que todas las referencias que has solicitado estarán disponibles en 24 horas.
+            </p>
+            <p class="is-chain">Nos pondremos en contacto contigo cuando estén disponibles.</p>
+            <p class="is-chain">Muchas gracias.</p>
+          </article>
+          <ul class="section-budget__nav area-3" aria-label="Encuéntranos y contacta con nosotros">
+            <li>
+              <a href="#" target="_blank" role="button" class="d-flex" title="Busca nuestra ubicación en el mapa">
+                <span class="btn btn--square icon-locate-b has-icon" role="img" aria-hidden="true"></span>
+                <span>Encuéntranos</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" target="_blank" role="button" class="d-flex" title="Contáctanos por teléfono">
+                <span class="btn btn--square icon-call-b has-icon" role="img" aria-hidden="true"></span>
+                <span>Llamar</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" target="_blank" role="button" class="d-flex" title="Contáctanos por correo electrónico">
+                <span class="btn btn--square icon-mail-b has-icon" role="img" aria-hidden="true"></span>
+                <span>Enviar mail</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" target="_blank" role="button" class="d-flex" title="Contáctanos por Whatsapp">
+                <span class="btn btn--square icon-whatsapp-b has-icon" role="img" aria-hidden="true"></span>
+                <span>Enviar Whatsapp</span>
+              </a>
+            </li>
+          </ul>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="section-download area-4 mb-7">
+      <div class="container">
+        <h3 class="title title--main text-center area-1">Centro de descargas</h3>
+        <ul class="downloads-list area-2">
+          <li>
+            <a href="#" target="_blank" role="button" class="btn btn--download">
+              <span class="icon-book" role="img" aria-hidden="true"></span>
+              <span>Libro de Mantenimiento</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" target="_blank" role="button" class="btn btn--download">
+              <span class="icon-user-manual" role="img" aria-hidden="true"></span>
+              <span>Manual de usuario</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" target="_blank" role="button" class="btn btn--download">
+              <span class="icon-warranty-book" role="img" aria-hidden="true"></span>
+              <span>Libro de Garantía</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" target="_blank" role="button" class="btn btn--download">
+              <span class="icon-catalogue" role="img" aria-hidden="true"></span>
+              <span>Catálogo de Accesorios</span>
+            </a>
+          </li>
+        </ul>
+        <article class="section-download__app area-3">
+          <div class="color-box color-box--black">
+            <h3 class="title title--secondary text-center mb-4">Descarga la App de Clientes Mitsubishi:</h3>
+            <ul class="list list--dotted mb-4" aria-label="Ventajas de la APP">
+              <li>Libro de mantenimiento digitalizado.</li>
+              <li>Sello digital con todos los mantenimientos realizados.</li>
+              <li>Petición de cita.</li>
+              <li>Tasación online de tu vehiculo.</li>
+              <li>Guantera digital.</li>
+            </ul>
+            <div class="d-flex justify-content-around">
+              <a href="#" target="_blank" role="button" title="Descarga la app desde Apple Store" class="d-flex">
+                <img src="assets/img/apple-store.svg" alt="Apple Store">
+              </a>
+              <a href="#" target="_blank" role="button" title="Descarga la app desde la Play Store" class="d-flex">
+                <img src="assets/img/play-store.svg" alt="Play Store">
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer class="main-footer">
+    <div class="container">
+      <figure class="main-footer__logo">
+        <img src="assets/img/mitsubishi-logo.svg" alt="Mitsubishi">
+      </figure>
+      <nav class="main-footer__nav">
+        <ul>
+          <li><a href="#" target="_blank" class="link is-footer">Privacidad</a></li>
+          <li><a href="#" target="_blank" class="link is-footer">Términos y condiciones</a></li>
+          <li><a href="#" target="_blank" class="link is-footer">Configuración de cookies</a></li>
+        </ul>
+      </nav>
+      <div class="main-footer__social">
+        <ul class="social-list mb-4">
+          <li>
+            <a href="#" target="_blank" role="button" aria-label="YouTube" title="YouTube" class="icon-youtube"></a>
+          </li>
+          <li>
+            <a href="#" target="_blank" role="button" aria-label="Linkedin" title="Linkedin" class="icon-linkedin"></a>
+          </li>
+          <li>
+            <a href="#" target="_blank" role="button" aria-label="Facebook" class="icon-facebook"></a>
+          </li>
+          <li>
+            <a href="#" target="_blank" role="button" aria-label="Instagram" title="Instagram"
+              class="icon-instagram"></a>
+          </li>
+        </ul>
+        <span>2022 © Mitsubishi Motors </span>
+        <span>Todos los derechos reservados</span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="floating-box" aria-hidden="true">
+    <input type="checkbox" id="touch">
+    <label for="touch" aria-label="Abrir y cerrar menú desplegable">
+      <span class="icon-arrow" role="img" aria-hidden="true"></span>
+    </label>
+    <nav class="floating-nav">
+      <ul>
+        <li>
+          <a href="#" target="_blank" role="button" class="d-flex">
+            Encuéntranos
+            <span class="btn btn--square icon-locate-b has-icon" role="img" aria-hidden="true"></span>
+          </a>
+        </li>
+        <li>
+          <a href="#" target="_blank" role="button" class="d-flex">
+            Llamar
+            <span class="btn btn--square icon-call-b has-icon" role="img" aria-hidden="true"></span>
+          </a>
+        </li>
+        <li>
+          <a href="#" target="_blank" role="button" class="d-flex">
+            Enviar mail
+            <span class="btn btn--square icon-mail-b has-icon"></span>
+          </a>
+        </li>
+        <li>
+          <a href="#" target="_blank" role="button" class="d-flex">
+            Enviar Whatsapp
+            <span class="btn btn--square icon-whatsapp-b has-icon" role="img" aria-hidden="true"></span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</body>
+
+</html>
