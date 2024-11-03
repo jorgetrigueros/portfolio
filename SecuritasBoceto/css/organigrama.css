@@ -1,0 +1,43 @@
+/****************************/
+/*      Ficha directores    */
+/****************************/
+.box1  {
+    border: 1px solid  #BE2432;
+    border-radius: 6px;
+    width:14.500em;
+    height:8.500em;
+    margin:0.250em 0em;
+}
+
+.box1 .photo {
+        height:75%;
+        width:auto;
+        margin:0.2500em;
+        float:left;
+    }
+
+.item-name{
+    background-color: #BE2432 !important;
+    border-radius: 6px;
+    color:white;
+    margin:0.125em;
+    padding-left:0.325em;
+}
+
+.item-puesto{
+    color: #BE2432;
+    font-weight: bold;
+}
+
+.item-area{
+    color: #929090;
+    font-size:small;
+}
+
+.colorSD {color:#BE2432 !important}
+
+.espacio-blanco{
+    margin-top:0.188em;
+}
+
+

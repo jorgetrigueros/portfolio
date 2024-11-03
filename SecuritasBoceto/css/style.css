@@ -1,0 +1,274 @@
+
+/* layout */
+.marginLeft10 {
+    margin-left:10px;
+}
+.marginLeft20 {
+    margin-left:20px;
+}
+.margintop10{
+    margin-top: 10px;
+}
+
+.dash{
+    border-style:dashed ;
+    margin-bottom:0px;
+    margin-top:0px;
+    color: #FDFDFD;
+}
+.borderrightdash {
+    border-right: 1px dashed #EEEEEE   /*FDFDFD*/
+}
+.bordersubmenuRight {
+    border-left: 4px solid #BE1622;
+}
+.bgalternate {
+    background-color: #E4E1E1;
+}
+.bgWhite {
+    background-color: #FFFFFF;
+}
+
+.bgMenuInferior{
+    /*background-color:#E4E1E1;*/
+    background-color: #EEEEEE;
+}
+.bgMenuInferiorOscuro{    
+    background-color: #DEDEDE;
+}
+.active {
+    color: #BE1622 !important;
+}
+.menuRightActive {
+    color: #ffffff !important;
+    background-color: #BE1622;
+}
+.menuRight {
+    position: relative;
+    left: -15px;    
+}
+A.menuRightActive{
+   color: #ffffff !important; 
+}
+A.menuprincipal {
+    font-size: 12px;
+    font-weight: bold;   
+    /*color: #E4E1E1;*/
+    color: #BE1622;
+}
+A.menuprincipal:link {
+    /*color: #E4E1E1;*/
+    color: #BE1622;
+}
+A.menuprincipal:hover {
+    /*color: #BE1622;*/
+    color: #E4E1E1;
+    text-decoration: none;
+}
+.menuinferior {
+    font-size: 9px;
+    color:#666666 !important;
+}
+.menulateral{
+    color:#666666 !important;
+    font-size:12px;
+}
+.subtituloInferior {
+    color:#666666;
+}
+
+/* Text class */
+h1, h2, h3, h4, h5, h6, p, span {
+    font-family: Arial,Helvetica, sans-serif;
+}
+h1 {
+    font-size:30px;
+}
+h2 {
+    font-size:25px;
+}
+h3 {
+    font-size:20px;
+}
+h4 {
+    font-size:16px;
+}
+h5 {
+    font-size:12px;
+}
+h6 {
+    font-size:9px;
+}
+
+.seccion {
+
+    color:#333333 !important;
+    font-weight: bold;
+}
+.titulares {
+    color:#333333;
+}
+.cuerpo {
+    color:#333333;
+    font-size:12px;
+}
+
+.question {
+    color:#333333;
+    font-size:12px;
+    text-decoration: underline;
+}
+.response {
+    color:#333333;
+    font-size:12px;
+    font-style: italic;
+}
+
+.subtitulos {    
+    color: #666666;
+    font-weight: bold;
+}
+
+.colorLnkLateral {
+    color:#666666 !important;
+}
+
+/*End text class*/
+
+.img-thumbnail {
+     background-color:#FDFDFD;
+}
+
+.img-thumbnail-none {
+    background-color:#FDFDFD;
+    border: 1px solid #DDDDDD;
+    border-radius: 4px;
+    display: inline-block;
+    height: auto;
+    line-height: 1.42857;
+    max-width: 100%;
+    padding: 4px;
+    transition: all 0.2s ease-in-out 0s;
+}
+.borderazul{
+    /*border-color: #3EBDDD;*/
+    border: 1px solid #3EBDDD;
+}
+
+.imgcategory {
+    background-color:#FDFDFD;
+}
+.icomenu {
+    border:0px; 
+    height: 36px;
+}
+
+.hrnomargin {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: #EEEEEE -moz-use-text-color -moz-use-text-color;
+    border-image: none;
+    border-right: 0 none;
+    border-style: solid none none;
+    border-width: 1px 0 0;
+    margin-bottom: 3px !important;
+    margin-top: 3px !important;
+}
+
+/* Link */
+a:link {
+    color:#3EBDDD;
+}
+
+.footer {
+    font-size: 12px;
+    color: #666666;
+}
+
+A.footer {
+    color: #666666;   
+    font-size: 11px;    
+}
+A.footer:hover {
+    color: #BE1622;
+}
+
+.percent128{
+    max-width: 125%;
+}
+
+
+.fc-grid .fc-day-number {
+    position: absolute;
+    z-index: 10000;
+}
+.fc-event-inner {
+    /*background-color: #BE1622 !important;*/
+    height: 21px !important;
+    /*position: relative;
+    top: -21px !important;*/
+    width: 100%;    
+    opacity:0.5 !important;            
+    filter:alpha(opacity=50);     
+}
+.fc-event{
+    background-color: none !important;
+}
+.fc-widget-content {
+    /*z-index: -100;*/
+}
+.fc-day-number{
+    color: #666666;
+}
+
+.fc-event{
+    background-color: none !important;
+}        
+        
+.fc-today .fc-day-number {            
+  color:  #FF0000 !important;
+}
+.fc-event-start .fc-event-end {
+   background-color: #ffd800 !important;
+   color: #FFFFFF;
+}
+
+
+.opaco{
+        opacity:0.7 !important;            
+        filter:alpha(opacity=30); 
+}
+
+
+.icoLike {
+    height:16px !important;
+    /*width: 16px !important;*/
+    
+}
+.number {
+    font-size: 9px;
+}
+.opcionesNoticia {
+    color:#666666;
+    font-size: 0.85em;
+}
+.myqtip {
+    width: 200px;
+    padding: 5px;
+    background: #A2D959;
+    color: #333333;
+    text-align: center;
+}
+
+/* Lidera styles*/
+.icoLeft{
+    border: 0px;
+    position: relative;
+    left: 14px;    
+}
+.borderBottom {
+    border-bottom: 1px solid #E6E6E6;
+    margin-top: 15px;
+}

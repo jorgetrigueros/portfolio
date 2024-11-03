@@ -1,0 +1,40 @@
+.demoImgDiv , .tongBg
+{
+	margin:5px;
+	width:450px;
+}
+.demoImgDiv 
+{
+	clear:both;
+	padding-left:40px;
+}
+
+.tongBg
+{
+	background:#000;
+	float:left;
+}
+
+img
+{
+	border:0px;
+	cursor:pointer;
+}
+
+#demoTable
+{
+	vertical-align:top;
+}
+
+#demoTable TD
+{
+}
+
+#demoTable TH
+{
+	margin-left:20px;
+	text-align:center;
+	color:blue;
+	height:50px;
+	line-height:50px;
+}

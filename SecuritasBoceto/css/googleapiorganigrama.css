@@ -1,0 +1,42 @@
+.google-visualization-orgchart-node-medium {
+    font-size: 0.65em !important;
+}
+.google-visualization-orgchart-table * {
+    padding: 1px !important;
+}
+
+.google-visualization-orgchart-node {
+    background-color: #EDF7FF;
+    border: 2px solid #BE2432 !important;
+}     
+
+.bp-title:hover{
+    color: #fbd850 !important;
+}
+.bp-title-frame{
+    background-color: #BE2432 !important;
+}
+.bp-cursor-frame{
+    border: 1px solid #BE2432 !important;
+}
+.bp-item-puesto{
+    color: #BE2432; 
+    font-weight: bold;  
+}
+.bp-item-descripcion {
+    color: #BE2432;
+}
+.correo {
+    font-size: 1.1em; color: #666666 !important;
+    text-decoration: none;
+}
+.correo:hover {
+    text-decoration: none;
+    color: #fbd850 !important;
+}
+.borderyellow {
+    border: 1px solid #fbd850;
+}
+.director:hover{
+    text-decoration: none;                
+}

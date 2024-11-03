@@ -1,0 +1,728 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Securitas Direct</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+	<!--link rel="stylesheet/less" href="less/bootstrap.less" type="text/css" /-->
+	<!--link rel="stylesheet/less" href="less/responsive.less" type="text/css" /-->
+	<!--script src="js/less-1.3.3.min.js"></script-->
+	<!--append ‘#!watch’ to the browser URL, then refresh the page. -->
+	
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+
+    <style type="text/css">
+        .bt-item-frame {
+            background: url("images/ui-bg_highlight-soft_100_eeeeee_1x100.png") repeat-x scroll 50% top #FFFFFF !important;
+        }        
+        .bp-title{
+            text-align: left;
+        }
+    </style>
+            
+	<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- Fav and touch icons -->  
+  <link rel="shortcut icon" href="img/favicon.png">
+     
+    <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script> 
+    <script type="text/javascript" src="js/jquery-ui-1.10.2.custom.min.js"></script>
+    <script type="text/javascript" src="js/jquery.tmpl.min.js"></script>  
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>    
+
+    <script type="text/javascript" src="js/linq.min.js"></script>    
+    <script type="text/javascript" src="js/primitives.min.js"></script>
+    <script type="text/javascript" src="js/querystring-0.9.0-min.js"></script>
+    
+
+    <link href="css/primitives.latest.css" media="screen" rel="stylesheet" type="text/css" />
+
+    <script type="text/javascript">
+
+        var idorganigrama = $.QueryString("org");
+
+        //var $window = $(window);
+        /*
+        function checkWidth() {
+        var windowsize = $window.width();
+        console.log(windowsize);
+
+        if (windowsize < 800) {
+
+        }
+        }
+        */
+
+        var m_timer = null;
+
+        $(document).ready(function () {
+
+            ResizePlaceholder();
+
+            var options = new primitives.orgdiagram.Config();
+            options.hasSelectorCheckbox = primitives.common.Enabled.False;
+            options.onMouseClick = onMouseClick;
+
+            /*
+            var equipoSantiagoLLorente = [
+            new primitives.orgdiagram.ItemConfig({
+            id: 0,
+            parent: null,
+            title: "Ayudante Llorente - 1",
+            description: "Equipo Santiago LLorente - 1",
+            phone: "(123) 456-78-90",
+            email: "ayudante1.llorente@securitasdirect.es",
+            departament: "Financiero",
+            image: "img/organigrama/estebanredondo.png",
+            templateName: "contactTemplate",
+            itemTitleColor: "blue"
+            }),
+            new primitives.orgdiagram.ItemConfig({
+            id: 1,
+            parent: null,
+            title: "Ayudante Llorente - 2",
+            description: "Equipo Santiago LLorente - 1",
+            phone: "(123) 456-78-90",
+            email: "ayudante1.llorente@securitasdirect.es",
+            departament: "Financiero",
+            image: "img/organigrama/estebanredondo.png",
+            templateName: "contactTemplate",
+            itemTitleColor: "blue"
+            })
+            ];
+            */
+
+            var jsonData = [
+                {
+                    idOrganigrama: 1,
+                    id: 0,
+                    parent: null,
+                    title: "Esteban Redondo",
+                    description: "DIRECTOR Financiero",
+                    phone: "(123) 456-78-90",
+                    email: "esteban.redondo@securitasdirect.es",
+                    departament: "Financiero",
+                    image: "img/organigrama/estebanredondo.png",
+                    templateName: "contactTemplate",
+                    itemTitleColor: "red",
+                    linkEntrevista: "entrevistasantiagollorente.htm"
+                },
+                {
+                    idOrganigrama: 1,
+                    id: 1,
+                    parent: null,
+                    title: "Mariam Martínez",
+                    description: "Assitant Director Financiero",
+                    description2: "Administración delegaciones",
+                    phone: "(123) 456-78-90",
+                    email: "maria.mhermoso@securitasdirect.es",
+                    departament: "Financiero",
+                    image: "img/organigrama/mariammartinez.png",
+                    templateName: "contactTemplate",
+                    itemTitleColor: "blue"
+                },
+                {
+                    idOrganigrama: 1,
+                    id: 2,
+                    parent: 0,
+                    title: "Cristina Gallego",
+                    description: "DIRECTORA",
+                    description2: "Administración",
+                    phone: "(123) 456-78-90",
+                    email: "cristina.gallego@securitasdirect.es",
+                    departament: "Financiero",
+                    image: "img/organigrama/cristinagallego.png",
+                    templateName: "contactTemplate",
+                    itemTitleColor: "red"
+                },
+                {
+                    idOrganigrama: 1,
+                    id: 3,
+                    parent: 2,
+                    title: "Milagros Cubero",
+                    description: "Jefe Departamento",
+                    description2: "Facturación",
+                    phone: "(123) 456-78-90",
+                    email: "milagros.cubero@securitasdirect.es",
+                    departament: "Financiero",
+                    image: "img/organigrama/milagroscubero.png",
+                    templateName: "contactTemplate",
+                    itemTitleColor: "red"
+                },
+                {
+                    idOrganigrama: 1,
+                    id: 4,
+                    parent: 2,
+                    title: "Santiago Llorente",
+                    description: "Jefe Departamento",
+                    description2: "Contabilidad",
+                    phone: "(123) 456-78-90",
+                    email: "santiago.llorente@securitasdirect.es",
+                    departament: "Financiero",
+                    image: "img/organigrama/santiagollorente.png",
+                    //equipo: equipoSantiagoLLorente,
+                    equipo: "1#2#3",
+                    templateName: "contactTemplate",
+                    itemTitleColor: "red",
+                    linkEntrevista: "entrevistallorente.htm"
+                },
+                {
+                    idOrganigrama: 1,
+                    id: 5,
+                    parent: 3,
+                    title: "Ana Isabel Garrido",
+                    description: "Jefe Departamento",
+                    description2: "Control de Gestión",
+                    phone: "(123) 456-78-90",
+                    email: "anaisabel.garrido@securitasdirect.es",
+                    departament: "Financiero",
+                    image: "img/organigrama/AnaIsabelGarrido.png",
+                    templateName: "contactTemplate",
+                    itemTitleColor: "red"
+                },
+                {
+                    idOrganigrama: 1,
+                    id: 6,
+                    parent: 4,
+                    title: "Cristina Rodriguez",
+                    description: "Jefe Departamento",
+                    descripcion2: "Alta Mantenimiento",
+                    phone: "(123) 456-78-90",
+                    email: "cristina.rodriguez@securitasdirect.es",
+                    departament: "Financiero",
+                    image: "img/organigrama/CristinaRodriguez.png",
+                    templateName: "contactTemplate",
+                    itemTitleColor: "red"
+                },
+                {
+                    idOrganigrama: 1,
+                    id: 7,
+                    parent: 5,
+                    title: "Carlos Tomé",
+                    description: "Jefe Departamento",
+                    description2: "Gestión Cobros",
+                    phone: "(123) 456-78-90",
+                    email: "carlos.tome@securitasdirect.es",
+                    departament: "Financiero",
+                    image: "img/organigrama/CarlosTome.png",
+                    templateName: "contactTemplate",
+                    itemTitleColor: "red"
+                },
+                {
+                    idOrganigrama: 1,
+                    id: 8,
+                    parent: 6,
+                    title: "Cristina Martínez",
+                    description: "Jefe Departamento",
+                    description2: "Medios de Pago",
+                    phone: "(123) 456-78-90",
+                    email: "cristina.martinez@securitasdirect.es",
+                    departament: "Financiero",
+                    image: "img/organigrama/CristinaMartinez.png",
+                    templateName: "contactTemplate",
+                    itemTitleColor: "red"
+                },
+                {
+                    idOrganigrama: 1,
+                    id: 9,
+                    parent: 7,
+                    title: "Maria Dolores Elena",
+                    description: "Jefe Departamento",
+                    description2: "Precontencioso",
+                    phone: "(123) 456-78-90",
+                    email: "maruchi.elena@securitasdirect.es",
+                    departament: "Financiero",
+                    image: "img/organigrama/MariaDoloresElena.png",
+                    templateName: "contactTemplate",
+                    itemTitleColor: "red"
+                },
+                {
+                    idOrganigrama: 1,
+                    id: 10,
+                    parent: 8,
+                    title: "Andrés Díaz",
+                    description: "Responsable Dirección de",
+                    description2: "Proyectos",
+                    phone: "(123) 456-78-90",
+                    email: "andres.diaz@securitasdirect.es",
+                    departament: "Financiero",
+                    image: "img/organigrama/AndresDiaz.png",
+                    templateName: "contactTemplate",
+                    itemTitleColor: "red"
+                },
+                {
+                    idOrganigrama: 1,
+                    id: 11,
+                    parent: 9,
+                    title: "Rafael Marcos",
+                    description: "Jefe Departamento",
+                    description2: "Comunicaciones",
+                    phone: "(123) 456-78-90",
+                    email: "rafael.marcos@securitasdirect.es",
+                    departament: "Financiero",
+                    image: "img/organigrama/RafaelMarcos.png",
+                    templateName: "contactTemplate",
+                    itemTitleColor: "red"
+                }
+
+            ]
+
+
+            var itemsDeptoFinanciero = [];
+            //jsonData
+
+            var data = Enumerable.From(jsonData).Where(function (x) { return x.idOrganigrama == idorganigrama }).Select().ToArray();
+
+            for (i = 0; i < data.length; i++) {
+                var item = new primitives.orgdiagram.ItemConfig(data[i]);
+                itemsDeptoFinanciero.push(item);
+            }
+
+
+            options.items = itemsDeptoFinanciero;
+            options.cursorItem = 0;
+            options.templates = [getContactTemplate()];
+            options.onItemRender = onTemplateRender;
+
+            jQuery("#basicdiagram").orgDiagram(options);
+
+            $(window).resize(function () {
+                onWindowResize();
+            });
+
+            // Execute on load
+            //checkWidth();
+            // Bind event listener
+            //$(window).resize(checkWidth);
+
+
+            function onTemplateRender(event, data) {
+                switch (data.renderingMode) {
+                    case primitives.common.RenderingMode.Create:
+                        /* Initialize widgets here */
+                        break;
+                    case primitives.common.RenderingMode.Update:
+                        /* Update widgets here */
+                        break;
+                }
+
+                var itemConfig = data.context;
+
+                if (data.templateName == "photoTemplate") {
+                    data.element.find("[name=photo]").attr({ "src": itemConfig.image, "alt": itemConfig.title });
+                    data.element.find("[name=title]").text(itemConfig.title);
+                } else if (data.templateName == "contactTemplate") {
+                    data.element.find("[name=photo]").attr({ "src": itemConfig.image, "alt": itemConfig.title });
+                    data.element.find("[name=titleBackground]").css({ "background": itemConfig.itemTitleColor });
+
+                    data.element.find("[name=equipo]").css({ "display": (itemConfig.equipo == null ? "none" : "block") });
+                    data.element.find("[name=entrevista]").css({ "display": (itemConfig.linkEntrevista == null ? "none" : "block") });
+                    data.element.find("[name=entrevista]").attr({ "href": itemConfig.linkEntrevista });
+
+                    var fields = ["title", "description", "description2", "phone", "email", "departament"];
+                    for (var index = 0; index < fields.length; index++) {
+                        var field = fields[index];
+
+                        var element = data.element.find("[name=" + field + "]");
+                        if (element.text() != itemConfig[field]) {
+                            element.text(itemConfig[field]);
+                        }
+                    }
+                }
+            }
+
+
+            function getContactTemplate() {
+                var result = new primitives.orgdiagram.TemplateConfig();
+                result.name = "contactTemplate";
+
+                var itemWidth = 220;
+                var itemHeight = 120;
+                var widthCapa = itemWidth - 6;
+                var widthTitle = itemWidth - 20;
+                var positionEquipo = itemWidth - 32;
+
+                var fontSizeLarge = 12;
+                var fontSizeMedium = 12;
+                var fontSizeSmall = 9;
+
+
+                result.itemSize = new primitives.common.Size(itemWidth, itemHeight); //220x120
+                result.minimizedItemSize = new primitives.common.Size(12, 12); //Original 3,3. Tamaño del punto
+                result.highlightPadding = new primitives.common.Thickness(2, 2, 2, 2);
+                result.selectionPathMode = 1; //FullStack;
+
+                var itemTemplate = jQuery(
+                                   '<div class="bp-item bp-corner-all bt-item-frame">'
+                                   + '<div name="titleBackground" class="col-md-12 colum bp-item bp-corner-all bp-title-frame" style="top: 2px; left: 2px; width:' + widthCapa + 'px; height: 24px;">'
+                                       + '<div name="title" class="col-md-12 colum bp-item bp-title" style="top: 3px; left: 6px; width:' + widthTitle + 'px; height: 18px;">'
+                                       + '</div>'
+                                       + '<div  style="float:right; height: 25px; position:relative; z-index:1000;">'
+                                            + '<table><tr>'
+                                            + '<td><button name="equipo" class="btn btn-xs" style="border:1px solid lightgray" data-buttonname="equipo" type="button" title="Ver equipo"><i class="glyphicon glyphicon-user"></i></button></td>'
+                                            + '<td><a  name="entrevista" style="position:relative; top:-1px;"><button class="btn btn-xs" style="border:1px solid lightgray" data-buttonname="entrevista" type="button" title="Ver entrevista"><i class="glyphicon glyphicon-share-alt"></i></button></a></td>'
+                                            + '</tr></table>'
+                                       + '</div>'
+                                   + '</div>'
+
+                //+ '<div class="col-md-12 colum">'
+
+
+                                   + '<div class="bp-item bp-photo-frame" style="top: 30px; left: 2px; ">'
+                                       + '<img name="photo" style="width: 70px; height: 80px;" />'
+                                   + '</div>'
+
+                //+ '<div class="col-md-7 colum">' 
+
+                                   + '<div name="description" class="bp-item" style="top: 35px; left: 40px; width:' + itemWidth + 'px; height: 36px; font-size:' + fontSizeLarge + 'px;"></div>'
+                                   + '<div name="description2" class="bp-item" style="top: 53px; left: 40px; width:' + itemWidth + 'px; height: 18px; font-size:' + fontSizeMedium + 'px;"></div>'
+                                   + '<div name="phone" class="bp-item" style="top: 71px; left: 40px; width:' + widthTitle + 'px; height: 18px; font-size:' + fontSizeMedium + 'px;"></div>'
+                                   + '<div name="email" class="bp-item" style="top: 89px; left: 40px; width:' + itemWidth + 'px; height: 18px; font-size:' + fontSizeSmall + 'px;"></div>'
+
+                //+ '</div>' +
+                //+ '</div>' +
+
+                               + '</div>'
+                               ).css({
+                                   width: result.itemSize.width + "px",
+                                   height: result.itemSize.height + "px"
+                               }).addClass("bp-item bp-corner-all bt-item-frame");
+
+                result.itemTemplate = itemTemplate.wrap('<div>').parent().html();
+
+                return result;
+            }
+
+            function onMouseClick(event, data) {
+                var target = jQuery(event.originalEvent.target);
+                if (target.hasClass("btn") || target.parent(".btn").length > 0) {
+                    var button = target.hasClass("btn") ? target : target.parent(".btn");
+                    var buttonname = button.data("buttonname");
+
+                    var id = data.context.id;
+                    var message = "Pulsado el botón '" + buttonname + "' para el item (id=" + id + ") '" + data.context.title + "'.";
+                    message += (data.parentItem != null ? " Parent item '" + data.parentItem.title + "'" : "");
+
+                    var equipo = data.context.equipo;
+                    var members = equipo.split("#");
+
+                    message = members.length + " miembros en el equipo de " + data.context.title;
+                    message += "\n";
+                    for (i = 0; i < members.length; i++) {
+                        var member = Enumerable.From(jsonData).Where(function (x) { return x.id == members[i] }).Select().ToArray();
+                        message += "\n" + member[0].title;
+                    }
+                    message += "\n" + "(TODO: Mostrar en ventana modal cronograma del equipo)";
+
+                    alert(message);
+
+                    data.cancel = true;
+                }
+            }
+
+            function onWindowResize() {
+                if (m_timer == null) {
+                    m_timer = window.setTimeout(function () {
+                        ResizePlaceholder();
+                        jQuery("#orgdiagram").orgDiagram("update", primitives.orgdiagram.UpdateMode.Refresh)
+                        window.clearTimeout(m_timer);
+                        m_timer = null;
+                    }, 300);
+                }
+            }
+
+            function ResizePlaceholder() {
+                var bodyWidth = $(window).width() - 40
+                var bodyHeight = $(window).height() - 20
+                jQuery("#orgdiagram").css(
+                    {
+                        "width": bodyWidth + "px",
+                        "height": bodyHeight + "px"
+                    });
+            }
+
+        });
+  </script>
+</head>
+
+<body>
+<div class="container">
+	<div class="row clearfix">
+        <!--Logo -->
+	    <div class="col-md-7 column">
+	        <div class="col-md-2">
+	            <a href="index.html"><img src="img/logo.png" alt="Securitas Direct" style="border:0px;"/></a>
+	        </div>
+	        <div class="col-md-8" style="margin-top:20px">
+	            <h4>Lorem ipsum dolor sit amet consectetuer</h4>
+	        </div>	        	        
+	    </div>
+        <!--Menu principal-->
+	    <div class="col-md-5 column">
+            <!--
+            <div class="col-md-2">
+                &nbsp;
+            </div>
+            -->
+	        <div class="col-md-2">
+                <!--
+	            <div style="text-align: center">
+	                <a href="#"><img src="img/icoInfopoint.png" alt="InfoPoint" class="icomenu" title="InfoPoint"/></a>
+                    <a href="index.html" class="menuprincipal" style="margin-left: 2px;">InfoPoint</a>
+	            </div>	    	  	            	            
+                -->
+	        </div>
+	        <div class="col-md-2">
+	            <div style="text-align: center">
+	                <a href="compania.html"><img src="img/icoCompania2.png" alt="Compañía" class="icomenu" style="margin-left: 2px;" title="Compañía"/></a>
+                    <a href="compania.html" class="menuprincipal active" rel="Compañía" style="margin-left: 8px;">Compañía</a>
+	            </div>	            
+	        </div>
+	        <div class="col-md-2">
+	            <div style="text-align: center">
+	                <a href="clientes.html"><img src="img/icoclientes2.png" alt="Clientes" class="icomenu" title="Clientes"/></a>
+                    <a href="clientes.html" class="menuprincipal" rel="Clientes" style="margin-left: 2px;">Clientes</a>
+	            </div>	            	            	            
+	        </div>
+	        <div class="col-md-2">
+	            <div style="text-align: center">
+	                <a href="personas.html"><img src="img/icopersonas2.png" alt="Personas" class="icomenu" title="Personas" /></a>
+                    <a href="personas.html" class="menuprincipal" rel="Personas" style="margin-left: 4px;">Personas</a>
+	            </div>	    	            	            
+	        </div>
+	        <div class="col-md-2">
+	            <div style="text-align: center">
+	                <a href="#"><img src="img/icomysite2.png" alt="My Site" class="icomenu" title="My Site"/></a>
+                    <a href="#" class="menuprincipal" rel="MySite" style="margin-left: 2px;">My Site</a>
+	            </div>	    	            	            
+	        </div>
+	    </div>
+	</div>
+    <!--carrusel superior-->
+	<div class="row clearfix">
+		<div class="col-md-12 column">
+			<div class="carousel slide" id="carousel-123677">
+				<ol class="carousel-indicators">
+					<li class="active" data-slide-to="0" data-target="#carousel-123677"></li>
+					<li data-slide-to="1" data-target="#carousel-123677"></li>
+					<li data-slide-to="2" data-target="#carousel-123677"></li>
+				</ol>
+				<div class="carousel-inner">
+					<div class="item active">
+						<img alt="" src="http://lorempixel.com/1600/300/sports/1">
+						<div class="carousel-caption">
+							<h4>
+								First Thumbnail label
+							</h4>
+							<p>
+								Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+							</p>
+						</div>
+					</div>
+					<div class="item">
+						<img alt="" src="http://lorempixel.com/1600/300/sports/2">
+						<div class="carousel-caption">
+							<h4>
+								Second Thumbnail label
+							</h4>
+							<p>
+								Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+							</p>
+						</div>
+					</div>
+					<div class="item">
+						<img alt="" src="http://lorempixel.com/1600/300/sports/3">
+						<div class="carousel-caption">
+							<h4>
+								Third Thumbnail label
+							</h4>
+							<p>
+								Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+							</p>
+						</div>
+					</div>
+				</div> <a class="left carousel-control" href="#carousel-123677" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a> <a class="right carousel-control" href="#carousel-123677" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+			</div>
+		</div>
+	</div>
+
+	<div class="row clearfix">
+		<div class="col-md-12 column">
+			<div class="row clearfix">
+
+<div class="col-md-12 column borderrightdash" style="margin-top: 10px;">
+
+	    <h2 class="seccion">
+			Organigrama
+        </h2>
+	    <hr class="dash"/>
+
+    <!--
+   <div class="col-md-12 column" style="margin-top:5px;">
+        <div id="basicdiagram" style="width: 98%; height: 680px; border-style: dotted; border-width: 1px;"></div>
+   </div>
+    -->
+
+        <div class="row-fluid">
+           <div class="table-responsive" style="height: 600px;margin-top:5px; text-align: center;" id="basicdiagram">                     
+           </div>
+        </div>
+
+
+</div>
+
+
+			</div>
+		</div>
+	</div>
+    <!--Footer-->
+	<div class="row clearfix" style="margin-top:10px;">
+		<div class="col-md-12 column">
+			<div class="row clearfix bgMenuInferior">
+				<div class="col-md-3 column borderrightdash" style="padding-left: 8%">
+					<h3 class="subtituloInferior">
+						Menú
+					</h3>
+					<ul class="list-unstyled">
+						<li>
+                            <a href="#" class="menuinferior">Portal del empleado</a>
+						</li>
+						<li>
+                            <a href="#" class="menuinferior">Menú semanal</a>
+						</li>
+						<li>
+                            <a href="#" class="menuinferior">InfoPoint aplicaciones</a>
+						</li>
+						<li>
+                            <a href="#" class="menuinferior">Buscador de empleados</a>
+						</li>
+						<li>
+                            <a href="#" class="menuinferior">Vacantes</a>
+						</li>
+						<li>
+                            <a href="#" class="menuinferior">Solicitudes viajes</a>
+						</li>
+						<li>
+                            <a href="#" class="menuinferior">Solicitud comedor</a>
+						</li>
+						<li>
+                            <a href="#" class="menuinferior">Solicitud/Información salas</a>
+						</li>
+                        <li>
+                            <a href="#" class="menuinferior">Calendario laboral</a>
+                        </li>
+					</ul>
+				</div>
+
+				<div class="col-md-4 column">
+                    <div class="col-md-6 column borderrightdash" style="padding-left: 8%">
+                        <h3 class="subtituloInferior">
+                            Compurse
+                        </h3>
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="#" class="menuinferior">Portal del empleado</a>
+                            </li>
+                            <li>
+                                <a href="#" class="menuinferior">Menú semanal</a>
+                            </li>
+                            <li>
+                                <a href="#" class="menuinferior">InfoPoint aplicaciones</a>
+                            </li>
+                            <li>
+                                <a href="#" class="menuinferior">Buscador de empleados</a>
+                            </li>
+                        </ul>
+
+                        <h3 class="subtituloInferior">
+                            Lussvar
+                        </h3>
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="#" class="menuinferior">Solicitud comedor</a>
+                            </li>
+                            <li>
+                                <a href="#" class="menuinferior">Solicitud/Información salas</a>
+                            </li>
+                            <li>
+                                <a href="#" class="menuinferior">Calendario laboral</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <div class="col-md-6 column borderrightdash" style="padding-left: 8%">
+                        <h3 class="subtituloInferior">
+                            Maintenb
+                        </h3>
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="#" class="menuinferior">Portal del empleado</a>
+                            </li>
+                            <li>
+                                <a href="#" class="menuinferior">Menú semanal</a>
+                            </li>
+                            <li>
+                                <a href="#" class="menuinferior">InfoPoint aplicaciones</a>
+                            </li>
+                            <li>
+                                <a href="#" class="menuinferior">Buscador de empleados</a>
+                            </li>
+                            <li>
+                                <a href="#" class="menuinferior">Vacantes</a>
+                            </li>
+                            <li>
+                                <a href="#" class="menuinferior">Solicitudes viajes</a>
+                            </li>
+                            <li>
+                                <a href="#" class="menuinferior">Solicitud comedor</a>
+                            </li>
+                            <li>
+                                <a href="#" class="menuinferior">Solicitud/Información salas</a>
+                            </li>
+                            <li>
+                                <a href="#" class="menuinferior">Calendario laboral</a>
+                            </li>
+                        </ul>
+                    </div>
+				</div>
+
+				<div class="col-md-5 column" style="padding-left: 5%">
+					<h3 class="subtituloInferior" style="margin-left:10px;">
+						Únete a nuestros programas
+					</h3>
+                    <div style="margin-top:8px;">
+                        <div class="col-md-5">
+                            <a href="#"><img src="img/programaLidera.png" class="img-thumbnail" /></a>
+                        </div>
+                        <div class="col-md-5">
+                            <a href="#"><img src="img/ideasInnovacion.png" class="img-thumbnail" /></a>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div style="margin-top:8px;">
+                        <div class="col-md-5">
+                            <a href="#"><img src="img/cuidaT.png" class="img-thumbnail" /></a>
+                        </div>
+                        <div class="col-md-5">
+                            <a href="#"><img src="img/encuestacompromiso.png" class="img-thumbnail" /></a>
+                        </div>
+                    </div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row clearfix">
+		<div class="col-md-12 column">
+		</div>
+	</div>
+</div>
+</body>
+</html>

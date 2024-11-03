@@ -1,0 +1,456 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Securitas Direct - Clientes</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+	<!--link rel="stylesheet/less" href="less/bootstrap.less" type="text/css" /-->
+	<!--link rel="stylesheet/less" href="less/responsive.less" type="text/css" /-->
+	<!--script src="js/less-1.3.3.min.js"></script-->
+	<!--append ‘#!watch’ to the browser URL, then refresh the page. -->
+	
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+    <!--<link href="css/adipoli.css" rel="stylesheet">-->
+    <link href="css/MyFadeOverImage.css" rel="stylesheet">
+            
+	<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- Fav and touch icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/apple-touch-icon-144-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/apple-touch-icon-114-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/apple-touch-icon-72-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" href="img/apple-touch-icon-57-precomposed.png">
+  <link rel="shortcut icon" href="img/favicon.png">
+     
+    <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script> 
+    <script type="text/javascript" src="js/jquery.tmpl.min.js"></script>  
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>    
+    <script type="text/javascript" src="js/jquery.tweet.js"></script>
+    <script type="text/javascript" src="js/jquery.MyFadeOverImage.js"></script>
+    <script type="text/javascript" src="js/clientesApp.js"></script>
+
+  <!-- Google calendar CDN -->
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/fullcalendar/1.6.4/fullcalendar.min.js"></script>
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/fullcalendar/1.6.4/fullcalendar.css" rel="stylesheet">
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/fullcalendar/1.6.4/fullcalendar.print.css" rel="stylesheet">
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            noticiasClientes();
+
+            $(".icomenu").hover(function () {
+                var titulo = $(this).attr("title");
+                var selector = ".menuprincipal[rel=" + titulo.replace(" ", "") + "]";
+                $(selector).addClass('active');
+            }, function () {
+                var titulo = $(this).attr("title");
+                if (titulo != "Clientes") {
+                    var selector = ".menuprincipal[rel=" + titulo.replace(" ", "") + "]";
+                    $(selector).removeClass('active');
+                }
+            });
+
+            //Mostrar el calendario http://arshaw.com/fullcalendar
+            $('#calendar').fullCalendar({
+                firstDay: 1,
+                prev: 'circle-triangle-w',
+                next: 'circle-triangle-e',
+                buttonText: {
+                    prev: '&lt;',
+                    next: '&gt;',
+                    today: 'Hoy'
+                },
+                monthNames: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'],
+                monthAbbrevs: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'],
+                dayNames: ['Domingo', 'Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 'Sábado'],
+                dayNamesShort: ['Dom', 'Lun', 'Mar', 'Mie', 'Jue', 'Vie', 'Sab']
+            })
+            //Tweeter
+            $(".tweet").tweet({
+                join_text: "auto",
+                username: "seaofclouds",
+                avatar_size: 48,
+                count: 3,
+                auto_join_text_default: " we said, ",
+                auto_join_text_ed: " we ",
+                auto_join_text_ing: " we were ",
+                auto_join_text_reply: " we replied ",
+                auto_join_text_url: " we were checking out ",
+                loading_text: "loading tweets..."
+            });
+
+        });
+  </script>
+</head>
+
+<body>
+<div class="container">
+	<div class="row clearfix">
+        <!--Logo -->
+	    <div class="col-md-7 column">
+	        <div class="col-md-2">
+	            <a href="index.html"><img src="img/logo.png" alt="Securitas Direct" style="border:0px;"/></a>
+	        </div>
+	        <div class="col-md-8" style="margin-top:20px">
+	            <h4>Lorem ipsum dolor sit amet consectetuer</h4>
+	        </div>	        	        
+	    </div>
+        <!--Menu principal-->
+	    <div class="col-md-5 column">
+            <!--
+            <div class="col-md-2">
+                &nbsp;
+            </div>
+            -->
+	        <div class="col-md-2">
+	            <div style="text-align: center">
+	                <a href="#"><img src="img/icoInfopoint.png" alt="InfoPoint" class="icomenu" title="InfoPoint"/></a>
+                    <a href="index.html" class="menuprincipal" style="margin-left: 2px;">InfoPoint</a>
+	            </div>	    	  	            	            
+	        </div>
+	        <div class="col-md-2">
+	            <div style="text-align: center">
+	                <a href="compania.html"><img src="img/icoCompania2.png" alt="Compañía" class="icomenu" style="margin-left: 2px;" title="Compañía"/></a>
+                    <a href="compania.html" rel="Compañía" class="menuprincipal" rel="Compañia" style="margin-left: 8px;">Compañía</a>
+	            </div>	            
+	        </div>
+	        <div class="col-md-2">
+	            <div style="text-align: center">
+	                <a href="#"><img src="img/icoclientes2.png" alt="Clientes" class="icomenu" title="Clientes"/></a>
+                    <a href="clientes.html" rel="Clientes" class="menuprincipal active" style="margin-left: 2px;">Clientes</a>
+	            </div>	            	            	            
+	        </div>
+	        <div class="col-md-2">
+	            <div style="text-align: center">
+	                <a href="#"><img src="img/icopersonas2.png" alt="Personas" class="icomenu" title="Personas" /></a>
+                    <a href="personas.html" rel="Personas" class="menuprincipal" style="margin-left: 4px;">Personas</a>
+	            </div>	    	            	            
+	        </div>
+	        <div class="col-md-2">
+	            <div style="text-align: center">
+	                <a href="#"><img src="img/icomysite2.png" alt="My Site" class="icomenu" title="My Site"/></a>
+                    <a href="#" class="menuprincipal" rel="MySite" style="margin-left: 2px;">My Site</a>
+	            </div>	    	            	            
+	        </div>
+	    </div>
+	</div>
+    <!--carrusel superior-->
+	<div class="row clearfix">
+		<div class="col-md-12 column">
+			<div class="carousel slide" id="carousel-123677">
+				<ol class="carousel-indicators">
+					<li class="active" data-slide-to="0" data-target="#carousel-123677"></li>
+					<li data-slide-to="1" data-target="#carousel-123677"></li>
+					<li data-slide-to="2" data-target="#carousel-123677"></li>
+				</ol>
+				<div class="carousel-inner">
+					<div class="item active">
+						<img alt="" src="http://lorempixel.com/1600/300/sports/1">
+						<div class="carousel-caption">
+							<h4>
+								First Thumbnail label
+							</h4>
+							<p>
+								Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+							</p>
+						</div>
+					</div>
+					<div class="item">
+						<img alt="" src="http://lorempixel.com/1600/300/sports/2">
+						<div class="carousel-caption">
+							<h4>
+								Second Thumbnail label
+							</h4>
+							<p>
+								Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+							</p>
+						</div>
+					</div>
+					<div class="item">
+						<img alt="" src="http://lorempixel.com/1600/300/sports/3">
+						<div class="carousel-caption">
+							<h4>
+								Third Thumbnail label
+							</h4>
+							<p>
+								Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+							</p>
+						</div>
+					</div>
+				</div> <a class="left carousel-control" href="#carousel-123677" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a> <a class="right carousel-control" href="#carousel-123677" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="row clearfix">
+		<div class="col-md-12 column">
+			<div class="row clearfix">
+                
+                <div class="col-md-9 column borderrightdash">
+                    <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++ Clientes noticias +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+                    <script id="noticiasclientesTemplate" type="text/x-jquery-tmpl">
+                        {{each(i,fila) Items}}
+                            {{if i % 2 == 0}}
+                            <div class="row clearfix" style="margin-bottom: 15px;">
+                                <div class="col-md-12 column">
+                            {{/if}}
+                                    <div class="col-md-6 column borderrightdash">
+                                        <span class="subtitulos">${titulo}</span>
+                                        <img src="${urlImage}" alt="" class="img-thumbnail">
+                                        <span class="cuerpo">{{html cuerpo}}</span>
+                                    </div>
+                            {{if (i % 2 == 1) || (i == Items.length-1)}}
+                                </div>
+                            </div>
+                            {{/if}}
+                        {{/each}}       
+                    </script>
+
+                    <h2 class="seccion">
+				        Clientes
+				    </h2>
+                    <hr class="dash"/>  
+                    
+                    <div id="noticiasclientes" style="margin-top:10px;">
+                        <!--Template noticias clientes-->
+                    </div>
+                    <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++ End clientes noticias ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+                    <h2 class="seccion">Cifras de negocio</h2>
+                    <hr class="dash"/>  
+                    <div class="row clearfix">
+                        <div class="col-md-12 column">
+                            <div class="col-md-2 column marginLeft10">
+                                <img src="img/clientes/cifras1.png" alt="Cifras 1" />
+                            </div>
+                            <div class="col-md-2 column marginLeft20">
+                                <img src="img/clientes/cifras2.png" alt="Cifras 2" />
+                            </div>
+                            <div class="col-md-2 column marginLeft20">
+                                <img src="img/clientes/cifras3.png" alt="Cifras 3" />
+                            </div>
+                            <div class="col-md-2 column marginLeft20">
+                                <img src="img/clientes/cifras4.png" alt="Cifras 4" />
+                            </div>
+                            <div class="col-md-2 column marginLeft20">
+                                <img src="img/clientes/cifras5.png" alt="Cifras 5" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr class="dash"/>  
+
+                    <div class="row clearfix margintop10">
+                        <div class="col-md-12 column">
+                            <div class="col-md-2 column marginLeft10">
+                                <img src="img/clientes/trivialsd.png" alt="Trivial SD" />
+                                <div style="width: 120px;margin-left: 30px;"><span class="subtitulos">Trivial SD</span></div>
+                            </div>
+                            <div class="col-md-2 column marginLeft20">
+                                <img src="img/clientes/SomosClientes.png" alt="Somos clientes" />
+                                <div style="width: 120px; margin-left: 30px;"><span class="subtitulos">Somos clientes</span></div>
+                            </div>
+                            <div class="col-md-2 column marginLeft20">
+                                <img src="img/clientes/sabiasque.png" alt="¿Sabías que?" />
+                                <div style="width: 120px; margin-left: 30px;"><span class="subtitulos">¿Sabías que...?</span></div>
+                            </div>
+                            <div class="col-md-2 column marginLeft20">
+                                <img src="img/clientes/comofuncionaalarma.png" alt="Cómo funciona una alarma" />
+                                <div style="width: 120px; margin-left: 30px;"><span class="subtitulos">Cómo funciona una alarma</span></div>
+                            </div>
+                            <div class="col-md-2 column marginLeft20">
+                                <img src="img/clientes/rompertabues.png" alt="Romper tabúes" />
+                                <div style="width: 120px; margin-left: 30px;"><span class="subtitulos">Romper tabúes</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+               
+
+                <!--Menu lateral -->
+				<div class="col-md-3 column">
+				    <h2 class="seccion">
+				        Menú
+				    </h2>
+				    <hr class="dash"/>
+                    <div style="margin-top:8px;margin-bottom: 8px;">
+                        <a href="#" class="menulateral"><em class="glyphicon glyphicon-play"></em>&nbsp;Portal del empleado</a><br>
+                        <a href="#" class="menulateral"><em class="glyphicon glyphicon-play"></em>&nbsp;Menú semanal</a><br>
+                        <a href="#" class="menulateral"><em class="glyphicon glyphicon-play"></em>&nbsp;InfoPoint aplicaciones</a><br>
+                        <a href="#" class="menulateral"><em class="glyphicon glyphicon-play"></em>&nbsp;Buscador de empleados</a><br>
+                        <a href="#" class="menulateral"><em class="glyphicon glyphicon-play"></em>&nbsp;Vacantes</a><br>
+                        <a href="#" class="menulateral"><em class="glyphicon glyphicon-play"></em>&nbsp;Solicitudes viajes</a><br>
+                        <a href="#" class="menulateral"><em class="glyphicon glyphicon-play"></em>&nbsp;Solicitud comedor</a><br>
+                        <a href="#" class="menulateral"><em class="glyphicon glyphicon-play"></em>&nbsp;Solicitud/Información salas</a><br>
+                        <a href="#" class="menulateral"><em class="glyphicon glyphicon-play"></em>&nbsp;Calendario laboral</a>
+                    </div>
+
+                    <hr class="dash"/>
+                    <!--Submenu -->
+                    <div class="col-md-12 column bordersubmenuRight" style="margin-top: 8px;">
+                        <div class="menuRight menuRightActive"><a href="#" class="menulateral menuRightActive marginLeft10">Segmentos</a></div>
+                        <div class="menuRight"><a href="#" class="menulateral marginLeft10">Comparativas</a></div>
+                        <div class="menuRight"><a href="#" class="menulateral marginLeft10">Acciones</a></div>
+                        <div class="menuRight"><a href="#" class="menulateral marginLeft10">Tú marcas la diferencia</a></div>
+                        <div class="menuRight"><a href="#" class="menulateral marginLeft10">Buzón de sugerencias</a></div>
+                    </div>
+
+                </div>
+			</div>
+		</div>
+	</div>
+    <!--Footer-->
+	<div class="row clearfix" style="margin-top:10px;">
+		<div class="col-md-12 column">
+			<div class="row clearfix bgMenuInferior">
+				<div class="col-md-3 column borderrightdash" style="padding-left: 8%">
+					<h3 class="subtituloInferior">
+						Menú
+					</h3>
+					<ul class="list-unstyled">
+						<li>
+                            <a href="#" class="menuinferior">Portal del empleado</a>
+						</li>
+						<li>
+                            <a href="#" class="menuinferior">Menú semanal</a>
+						</li>
+						<li>
+                            <a href="#" class="menuinferior">InfoPoint aplicaciones</a>
+						</li>
+						<li>
+                            <a href="#" class="menuinferior">Buscador de empleados</a>
+						</li>
+						<li>
+                            <a href="#" class="menuinferior">Vacantes</a>
+						</li>
+						<li>
+                            <a href="#" class="menuinferior">Solicitudes viajes</a>
+						</li>
+						<li>
+                            <a href="#" class="menuinferior">Solicitud comedor</a>
+						</li>
+						<li>
+                            <a href="#" class="menuinferior">Solicitud/Información salas</a>
+						</li>
+                        <li>
+                            <a href="#" class="menuinferior">Calendario laboral</a>
+                        </li>
+					</ul>
+				</div>
+
+				<div class="col-md-4 column">
+                    <div class="col-md-6 column borderrightdash" style="padding-left: 8%">
+                        <h3 class="subtituloInferior">
+                            Compurse
+                        </h3>
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="#" class="menuinferior">Portal del empleado</a>
+                            </li>
+                            <li>
+                                <a href="#" class="menuinferior">Menú semanal</a>
+                            </li>
+                            <li>
+                                <a href="#" class="menuinferior">InfoPoint aplicaciones</a>
+                            </li>
+                            <li>
+                                <a href="#" class="menuinferior">Buscador de empleados</a>
+                            </li>
+                        </ul>
+
+                        <h3 class="subtituloInferior">
+                            Lussvar
+                        </h3>
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="#" class="menuinferior">Solicitud comedor</a>
+                            </li>
+                            <li>
+                                <a href="#" class="menuinferior">Solicitud/Información salas</a>
+                            </li>
+                            <li>
+                                <a href="#" class="menuinferior">Calendario laboral</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <div class="col-md-6 column borderrightdash" style="padding-left: 8%">
+                        <h3 class="subtituloInferior">
+                            Maintenb
+                        </h3>
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="#" class="menuinferior">Portal del empleado</a>
+                            </li>
+                            <li>
+                                <a href="#" class="menuinferior">Menú semanal</a>
+                            </li>
+                            <li>
+                                <a href="#" class="menuinferior">InfoPoint aplicaciones</a>
+                            </li>
+                            <li>
+                                <a href="#" class="menuinferior">Buscador de empleados</a>
+                            </li>
+                            <li>
+                                <a href="#" class="menuinferior">Vacantes</a>
+                            </li>
+                            <li>
+                                <a href="#" class="menuinferior">Solicitudes viajes</a>
+                            </li>
+                            <li>
+                                <a href="#" class="menuinferior">Solicitud comedor</a>
+                            </li>
+                            <li>
+                                <a href="#" class="menuinferior">Solicitud/Información salas</a>
+                            </li>
+                            <li>
+                                <a href="#" class="menuinferior">Calendario laboral</a>
+                            </li>
+                        </ul>
+                    </div>
+				</div>
+
+				<div class="col-md-5 column" style="padding-left: 5%">
+					<h3 class="subtituloInferior" style="margin-left:10px;">
+						Únete a nuestros programas
+					</h3>
+                    <div style="margin-top:8px;">
+                        <div class="col-md-5">
+                            <a href="#"><img src="img/programaLidera.png" class="img-thumbnail" /></a>
+                        </div>
+                        <div class="col-md-5">
+                            <a href="#"><img src="img/ideasInnovacion.png" class="img-thumbnail" /></a>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div style="margin-top:8px;">
+                        <div class="col-md-5">
+                            <a href="#"><img src="img/cuidaT.png" class="img-thumbnail" /></a>
+                        </div>
+                        <div class="col-md-5">
+                            <a href="#"><img src="img/encuestacompromiso.png" class="img-thumbnail" /></a>
+                        </div>
+                    </div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row clearfix">
+		<div class="col-md-12 column">
+		</div>
+	</div>
+</div>
+</body>
+</html>

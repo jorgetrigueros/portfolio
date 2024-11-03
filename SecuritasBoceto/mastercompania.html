@@ -1,0 +1,271 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Securitas Direct</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+	<!--link rel="stylesheet/less" href="less/bootstrap.less" type="text/css" /-->
+	<!--link rel="stylesheet/less" href="less/responsive.less" type="text/css" /-->
+	<!--script src="js/less-1.3.3.min.js"></script-->
+	<!--append ‘#!watch’ to the browser URL, then refresh the page. -->
+	
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+            
+	<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- Fav and touch icons -->
+    <!--
+      <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/apple-touch-icon-144-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/apple-touch-icon-114-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/apple-touch-icon-72-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" href="img/apple-touch-icon-57-precomposed.png">
+    -->
+  <link rel="shortcut icon" href="img/favicon.png">
+    
+  <script src="js/jquery-1.7.2.min.js"></script> 
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function () {
+
+            $(".icomenu").hover(function () {
+                var titulo = $(this).attr("title");
+                var selector = ".menuprincipal[rel=" + titulo.replace(" ", "") + "]";
+                $(selector).addClass('active');
+            }, function(){
+                var titulo = $(this).attr("title");
+                var selector = ".menuprincipal[rel=" + titulo.replace(" ", "") + "]";
+                $(selector).removeClass('active');
+            });
+      });
+  </script>
+</head>
+
+<body>
+<div class="container">
+	<div class="row clearfix">
+        <!--Logo -->
+	    <div class="col-md-7 column">
+	        <div class="col-md-2">
+	            <a href="index.html"><img src="img/logo.png" alt="Securitas Direct" style="border:0px;"/></a>
+	        </div>
+	        <div class="col-md-8" style="margin-top:20px">
+	            <h4>Lorem ipsum dolor sit amet consectetuer</h4>
+	        </div>	        	        
+	    </div>
+        <!--Menu principal-->
+	    <div class="col-md-5 column">
+	        <div class="col-md-2">
+	            <div style="text-align: center">
+	                <a href="#"><img src="img/icoInfopoint.png" alt="InfoPoint" class="icomenu" title="InfoPoint"/></a>
+                    <a href="#" class="menuprincipal" rel="InfoPoint" style="margin-left: 2px;">InfoPoint</a>
+	            </div>	    	  	            	            
+	        </div>
+	        <div class="col-md-2">
+	            <div style="text-align: center">
+	                <a href="compania.html"><img src="img/icoCompania2.png" alt="Compañía" class="icomenu" style="margin-left: 2px;" title="Compañía"/></a>
+                    <a href="compania.html" class="menuprincipal" rel="Compañía" style="margin-left: 8px;">Compañía</a>
+	            </div>	            
+	        </div>
+	        <div class="col-md-2">
+	            <div style="text-align: center">
+	                <a href="clientes.html"><img src="img/icoclientes2.png" alt="Clientes" class="icomenu" title="Clientes"/></a>
+                    <a href="clientes.html" class="menuprincipal"  rel="Clientes" style="margin-left: 2px;">Clientes</a>
+	            </div>	            	            	            
+	        </div>
+	        <div class="col-md-2">
+	            <div style="text-align: center">
+	                <a href="personas.html"><img src="img/icopersonas2.png" alt="Personas" class="icomenu" title="Personas" /></a>
+                    <a href="personas.html" class="menuprincipal" rel="Personas" style="margin-left: 4px;">Personas</a>
+	            </div>	    	            	            
+	        </div>
+	        <div class="col-md-2">
+	            <div style="text-align: center">
+	                <a href="#"><img src="img/icomysite2.png" alt="My Site" class="icomenu" title="My Site"/></a>
+                    <a href="#" class="menuprincipal" rel="MySite" style="margin-left: 2px;">My Site</a>
+	            </div>	    	            	            
+	        </div>
+	    </div>
+	</div>
+	
+	<div class="row clearfix">
+		<div class="col-md-12 column">
+			<div class="row clearfix">
+                
+                <div class="col-md-9 column borderrightdash">
+                    <!-- ContentPlaceHolder-->
+                </div>
+
+                <div class="col-md-3 column">
+				    <h2 class="seccion">
+				        Menú
+				    </h2>
+				    <hr class="dash"/>
+                    <div style="margin-top:8px;">
+                        <a href="#" class="menulateral"><em class="glyphicon glyphicon-play"></em>&nbsp;Portal del empleado</a><br>
+                        <a href="#" class="menulateral"><em class="glyphicon glyphicon-play"></em>&nbsp;Menú semanal</a><br>
+                        <a href="#" class="menulateral"><em class="glyphicon glyphicon-play"></em>&nbsp;InfoPoint aplicaciones</a><br>
+                        <a href="#" class="menulateral"><em class="glyphicon glyphicon-play"></em>&nbsp;Buscador de empleados</a><br>
+                        <a href="#" class="menulateral"><em class="glyphicon glyphicon-play"></em>&nbsp;Vacantes</a><br>
+                        <a href="#" class="menulateral"><em class="glyphicon glyphicon-play"></em>&nbsp;Solicitudes viajes</a><br>
+                        <a href="#" class="menulateral"><em class="glyphicon glyphicon-play"></em>&nbsp;Solicitud comedor</a><br>
+                        <a href="#" class="menulateral"><em class="glyphicon glyphicon-play"></em>&nbsp;Solicitud/Información salas</a><br>
+                        <a href="#" class="menulateral"><em class="glyphicon glyphicon-play"></em>&nbsp;Calendario laboral</a>
+                    </div>
+                </div>
+
+			</div>
+		</div>
+	</div>
+    <!--Footer-->
+	<div class="row clearfix" style="margin-top:10px;">
+		<div class="col-md-12 column">
+			<div class="row clearfix bgMenuInferior">
+				<div class="col-md-3 column borderrightdash" style="padding-left: 8%">
+					<h3 class="subtituloInferior">
+						Menú
+					</h3>
+					<ul class="list-unstyled">
+						<li>
+                            <a href="#" class="menuinferior">Portal del empleado</a>
+						</li>
+						<li>
+                            <a href="#" class="menuinferior">Menú semanal</a>
+						</li>
+						<li>
+                            <a href="#" class="menuinferior">InfoPoint aplicaciones</a>
+						</li>
+						<li>
+                            <a href="#" class="menuinferior">Buscador de empleados</a>
+						</li>
+						<li>
+                            <a href="#" class="menuinferior">Vacantes</a>
+						</li>
+						<li>
+                            <a href="#" class="menuinferior">Solicitudes viajes</a>
+						</li>
+						<li>
+                            <a href="#" class="menuinferior">Solicitud comedor</a>
+						</li>
+						<li>
+                            <a href="#" class="menuinferior">Solicitud/Información salas</a>
+						</li>
+                        <li>
+                            <a href="#" class="menuinferior">Calendario laboral</a>
+                        </li>
+					</ul>
+				</div>
+
+				<div class="col-md-4 column">
+                    <div class="col-md-6 column borderrightdash" style="padding-left: 8%">
+                        <h3 class="subtituloInferior">
+                            Compurse
+                        </h3>
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="#" class="menuinferior">Portal del empleado</a>
+                            </li>
+                            <li>
+                                <a href="#" class="menuinferior">Menú semanal</a>
+                            </li>
+                            <li>
+                                <a href="#" class="menuinferior">InfoPoint aplicaciones</a>
+                            </li>
+                            <li>
+                                <a href="#" class="menuinferior">Buscador de empleados</a>
+                            </li>
+                        </ul>
+
+                        <h3 class="subtituloInferior">
+                            Lussvar
+                        </h3>
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="#" class="menuinferior">Solicitud comedor</a>
+                            </li>
+                            <li>
+                                <a href="#" class="menuinferior">Solicitud/Información salas</a>
+                            </li>
+                            <li>
+                                <a href="#" class="menuinferior">Calendario laboral</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <div class="col-md-6 column borderrightdash" style="padding-left: 8%">
+                        <h3 class="subtituloInferior">
+                            Maintenb
+                        </h3>
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="#" class="menuinferior">Portal del empleado</a>
+                            </li>
+                            <li>
+                                <a href="#" class="menuinferior">Menú semanal</a>
+                            </li>
+                            <li>
+                                <a href="#" class="menuinferior">InfoPoint aplicaciones</a>
+                            </li>
+                            <li>
+                                <a href="#" class="menuinferior">Buscador de empleados</a>
+                            </li>
+                            <li>
+                                <a href="#" class="menuinferior">Vacantes</a>
+                            </li>
+                            <li>
+                                <a href="#" class="menuinferior">Solicitudes viajes</a>
+                            </li>
+                            <li>
+                                <a href="#" class="menuinferior">Solicitud comedor</a>
+                            </li>
+                            <li>
+                                <a href="#" class="menuinferior">Solicitud/Información salas</a>
+                            </li>
+                            <li>
+                                <a href="#" class="menuinferior">Calendario laboral</a>
+                            </li>
+                        </ul>
+                    </div>
+				</div>
+
+				<div class="col-md-5 column" style="padding-left: 5%">
+					<h3 class="subtituloInferior" style="margin-left:10px;">
+						Únete a nuestros programas
+					</h3>
+                    <div style="margin-top:8px;">
+                        <div class="col-md-5">
+                            <a href="#"><img src="img/programaLidera.png" class="img-thumbnail" /></a>
+                        </div>
+                        <div class="col-md-5">
+                            <a href="#"><img src="img/ideasInnovacion.png" class="img-thumbnail" /></a>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div style="margin-top:8px;">
+                        <div class="col-md-5">
+                            <a href="#"><img src="img/cuidaT.png" class="img-thumbnail" /></a>
+                        </div>
+                        <div class="col-md-5">
+                            <a href="#"><img src="img/encuestacompromiso.png" class="img-thumbnail" /></a>
+                        </div>
+                    </div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row clearfix">
+		<div class="col-md-12 column">
+		</div>
+	</div>
+</div>
+</body>
+</html>

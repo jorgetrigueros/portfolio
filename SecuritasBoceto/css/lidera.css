@@ -1,0 +1,112 @@
+.nav-list > .active > a, .nav-list > .active > a:hover, .nav-list > .active > a:focus, .nav-list > a:visited{
+    background-color: #BE1622 !important;
+    color: #FFFFFF !important;
+}
+.nav > li > a:hover,
+.nav > li > a:focus {
+  text-decoration: none;
+  background-color: #BE1622 !important;
+  color: #FFFFFF !important;
+  border: 1px solid #EEEEEE !important;
+}
+
+.icoLeft{
+    border: 0px;
+    position: relative;
+    left: 16px;    
+}
+.borderBottom {
+    border-bottom: 1px solid #E6E6E6;
+    margin-top: 15px;
+}
+
+.infoIdea{
+    border: 1px solid #BE1622;
+    height: 80px;
+    text-align: center;
+    padding-top: 4px;
+    font-size: 1.2em;
+    /*color: #005580;*/
+    color: #BE1622;
+}
+.number{
+    margin-top: 5px;
+    /*color: #005580;*/
+    color: #BE1622;
+    font-size: 2.5em;
+    font-weight: bold;
+}
+.full {
+    width: 100%;
+}
+.centered{
+    text-align: center;
+}
+.corporate {
+    color: #BE1622 !important;
+}
+
+ul#actores{
+    list-style-type: none;
+}
+
+ul#actores li:before{
+    content: "•";
+    margin-right: 5px;
+    font-weight: bold;
+    color: #666666;
+}
+
+.resalto {
+    font-size:1.4em;
+}
+
+/*Tabla actividades*/
+.captionCell{
+    color: #737373;
+    font-size: 1.3em;
+}
+.captionEstado{
+    color: #737373;
+    font-size: 1.3em;    
+    position: relative;
+    top: 20px;
+}
+.captionFeedback{
+    color: #737373;
+    font-size: 1.3em;    
+    position: relative;
+    top: 20px;
+}
+.table th, .table td{
+    padding: 4px !important;
+}
+
+.actividadtitle{
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.bordertop{
+    border-top: 1px solid #DDDDDD;
+}
+
+.number18{
+    font-size: 2.4em;
+    color: #737373;
+    font-weight: bold;
+}
+.cuerpo14 {
+    font-size: 1.2em;
+    color: #737373;
+}
+.cuerpo12 {
+    font-size: 1em;
+    color: #737373;
+}
+.middle {
+    margin-top: 12px;
+}
+
+
+/*End Tabla actividades*/

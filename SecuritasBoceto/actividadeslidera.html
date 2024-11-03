@@ -1,0 +1,343 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Securitas Direct - Lidera</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+	<!--link rel="stylesheet/less" href="less/bootstrap.less" type="text/css" /-->
+	<!--link rel="stylesheet/less" href="less/responsive.less" type="text/css" /-->
+	<!--script src="js/less-1.3.3.min.js"></script-->
+	<!--append ‘#!watch’ to the browser URL, then refresh the page. -->
+	
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+    <link href="css/lidera.css" rel="stylesheet">
+
+                
+	<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- Fav and touch icons -->
+
+  <link rel="shortcut icon" href="img/favicon.png">
+    
+  <script src="js/jquery-1.7.2.min.js"></script> 
+  <script src="js/jquery.tmpl.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            var lstCompetencias = [
+                {
+                   "IdCompetencia": 1,
+                   "Competencia" : "Visión General - I" 
+                },
+                {
+                    "IdCompetencia":2,
+                    "Competencia" : "Visión General - II" 
+                }
+            ];
+            
+            var lstActividades = [
+             {
+                 "ID": 1,
+                 "Title": "Prueba",
+                 "Estado": "No iniciado",
+                 "RowClass": "red",
+                 "Icono": "img/icons/resources/iconbussinescase.png",
+                 "Creditos": "10",
+                 "CreditosUsuario": "10",
+                 "UrlRecurso": "http://www.google.es"
+             },
+             {
+                 "ID": 2,
+                 "Title": "Prueba-2",
+                 "Estado": "No iniciado",
+                 "RowClass": "red",
+                 "Icono": "img/icons/resources/iconbussinescase.png",
+                 "Creditos": "10",
+                 "CreditosUsuario": "10",
+                 "UrlRecurso": "http://www.google.es"
+             }
+            ];
+
+            var lstActividadesII = [
+                 {
+                     "ID": 3,
+                     "Title": "Otra actividad",
+                     "Estado": "No iniciado",
+                     "RowClass": "red",
+                     "Icono": "img/icons/resources/iconbussinescase.png",
+                     "Creditos": "10",
+                     "CreditosUsuario": "10",
+                     "UrlRecurso": "http://www.google.es"
+                 }
+            ];
+
+            $('#competenciasTemplate').tmpl(lstCompetencias).appendTo('#competencias');
+            $('#actividadesTemplate').tmpl(lstActividades).appendTo('#actividades1');
+            $('#actividadesTemplate').tmpl(lstActividadesII).appendTo('#actividades2');
+
+        });
+
+  </script>
+
+</head>
+
+<body>
+
+<div id="content">
+
+<!-- CAROUSEL -------------------------------------------------------------------------------------------- -->
+<div class="row-fluid shadow">
+		<div class="col-md-3" style="margin-left: 20px; margin-top: 15px;">
+	            <img src="img/programalidera.png" alt="Programa lidera">
+	            
+			    <p style="margin-top: 6px;" class="cuerpo">
+                    <span style="font-size:1.1em;"><strong>Lidera</strong></span> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+			    </p>
+		</div>
+		
+		<div class="col-md-8">
+			<div class="carousel slide" id="carousel-525541" style="margin-left: 40px; margin-top: 40px;">
+				<ol class="carousel-indicators">
+					<li class="active" data-slide-to="0" data-target="#carousel-525541"></li>
+					<li data-slide-to="1" data-target="#carousel-525541"></li>
+					<li data-slide-to="2" data-target="#carousel-525541"></li>
+					<li data-slide-to="3" data-target="#carousel-525541"></li>
+                    <li data-slide-to="4" data-target="#carousel-525541"></li>
+                    <li data-slide-to="5" data-target="#carousel-525541"></li>
+				</ol>
+				<div class="carousel-inner">
+					<div class="item active">
+						<img alt="" src="img/Carousel1.jpg"> 
+						<!--
+						<div class="carousel-caption">
+							<h4>
+								Competencia: Visión compartida
+							</h4>                            
+						</div>
+						-->						
+					</div>
+					<div class="item">
+						<img alt="" src="img/Carousel2.jpg">
+						<!--
+						<div class="carousel-caption">
+							<h4>
+								Competencia: Gestión del cambio
+							</h4>
+						</div>
+						-->
+					</div>
+					<div class="item">
+						<img alt="" src="img/Carousel3.jpg">
+						<!--
+						<div class="carousel-caption">
+							<h4>
+								Competencia: Gestión del Cliente
+							</h4>
+						</div>
+						-->
+					</div>
+                    <div class="item">
+						<img alt="" src="img/Carousel4.jpg"> 
+						<!--
+						<div class="carousel-caption">
+							<h4>
+								Competencia: Dirección y Desarrollo del Equipo
+							</h4>
+							<p>
+								Capacidad para gestionar eficientemente a sus colaboradores, potenciando su crecimiento profesional y facilitando el espíritu de equipo. Su ascendencia e impacto guía a los demás hacia el logro de los objetivos de la Dirección o Área y los de la Compañía, en un entorno de confianza, respeto y colaboración. 
+							</p>
+						</div>
+						-->
+					</div>
+                    <div class="item">
+						<img alt="" src="img/Carousel5.jpg"> 
+						<!--
+						<div class="carousel-caption">
+							<h4>
+								Competencia: Capacidad Analítica y toma de Decisiones
+							</h4>
+						</div>                        
+						-->
+					</div>
+                    <div class="item">
+						<img alt="" src="img/Carousel6.jpg"> 
+						<!--
+						<div class="carousel-caption">
+							<h4>
+								Competencia: Gestión de Procesos
+							</h4>
+						</div>
+						-->
+					</div>
+
+				</div> 
+					<a data-slide="prev" href="#carousel-525541" class="left carousel-control" style="color: #FFFFFF !important;">‹</a> 
+	                <a data-slide="next" href="#carousel-525541" class="right carousel-control" style="color: #FFFFFF !important;">›</a>
+				</div>
+		</div>
+</div>
+<!-- END CAROUSEL -------------------------------------------------------------------------------------------- -->
+
+<div class="row clearfix">
+
+<div class="col-md-12 column" style="margin-top: 20px;">
+
+<div class="col-md-10 column borderrightdash capaInfo">
+
+    <h2 class="seccion">
+        Mis actividades
+    </h2>
+    <hr class="dash">
+    
+   <div id="error" class="alert alert-danger" style="display:none">Ocurrió un error: <span id="lblError"></span></div>
+    
+    <!--Totales -->
+	<div class="row clearfix" style="margin-top: 20px;">
+	   <div class="col-md-3 infoIdea"><strong class="number" id="lblTotalActividades"></strong><br>Total actividades</div>
+	   <div class="col-md-3 infoIdea"><strong class="number" id="lblTotalRealizadas"></strong><br>Total realizadas</div>
+       <div class="col-md-3 infoIdea"><strong class="number" id="lblCreditosUsuario"></strong><strong style="margin-left: 3px; margin-right: 3px; font-size: 2.7em;">/</strong><strong class="number" id="lblTotalCreditos"></strong><br>Créditos</div>
+	</div>    
+
+    
+    <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  Actividades template ++++++++++++++++++++++++++++++++++++++++ -->
+    <script id="actividadesTemplate" type="text/x-jquery-tmpl">
+            <tr style="border-top: 0px;" class="{{html RowClass}}">
+				<td data-title="" style="background-color:#F8F8F8 !important;">
+					<a href="detail.aspx?act={{html ID}}"><img src="{{html Icono}}" alt="Acceder" style="width:52px;" /></a>
+				</td>
+                <td data-title="Titulo" style="background-color:#F8F8F8 !important;">
+                    <a href="detail.aspx?act={{html ID}}" style="text-decoration:none;"><h4 class="corporate" style="margin-top:16px;">{{html Title}}</h4></a>
+                </td>
+				<td data-title="Estado" style="text-align:left; margin-left:20px;">
+					<span class="captionEstado" title="${ID}">No Iniciada</span>
+				</td>
+				<td data-title="Feedback" style="text-align:center;">
+					<a href="#"><span class="captionFeedback" title="${ID}">Ver</span></a>
+				</td>                
+			</tr>                    
+    </script>
+    <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  End Actividades template +++++++++++++++++++++++++++++++++++ -->    
+
+    <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  Competencias template ++++++++++++++++++++++++++++++++++++++ -->
+    <script id="competenciasTemplate" type="text/x-jquery-tmpl">
+	        <!--Titulo competencia -->	
+            <div style="margin-top: 20px;">                        
+                <div style="float: left; width:90%; border:1px solid #BE1622; padding-left:40px;">
+                    <table>
+                        <tr>
+                            <td>
+                                <img src="img/IconoHace.png" style="height:100px;">
+                            </td>
+                            <td>
+                                <h2 style="color:#5E5E5E" id="lblTituloCompetencia">${Competencia}</h2>                
+                                <a href class="lnkForo" title="${IdCompetencia}"><img src="img/iconForo.png" title="Acceso al foro" style="width:52px">&nbsp;Acceder al foro</a>
+                            </td>                            
+                        </tr>
+                    </table>
+                </div>                
+            </div>
+
+            <div class="row" style="margin-bottom:8px;"></div>
+
+            <div class="col-md-10 column borderrightdash" id="no-more-tables">
+            
+    			<table class="table table-hover" style="margin-left:20px;font-size: 1em;">
+			        <thead>
+				        <tr>
+					        <th style="width: 40px;">
+                                <!--Icono-->
+					        </th>
+					        <th>
+                                <!--Actividad-->
+                                <span class="captionCell">Actividad</span>
+					        </th>
+					        <th style="width: 140px;">
+                                <span class="captionCell">Estado</span>
+					        </th>
+					        <th style="width: 70px;">
+                                <span class="captionCell">Feedback</span>
+					        </th>
+
+				        </tr>
+			        </thead>
+			        <tbody id="actividades${IdCompetencia}">
+                        <!--Actividades template-->
+			        </tbody>
+		        </table>
+
+            </div>
+    </script>
+    <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  End Competencias template ++++++++++++++++++++++++++++++++++ -->    
+
+    
+	<div class="row-fluid" id="competencias">
+	        <!--Competencias template-->  
+    </div>    
+    	 	
+</div>
+
+			<div class="col-md-2 column" id="menuLidera">
+	
+				    <h2 class="seccion">
+				        Menú
+				    </h2>
+				    <hr class="dash">
+				    	
+						<ul class="nav nav-list">
+							<li class="nav-header">
+								<!--Menú Innovación-->
+			                    &nbsp;&nbsp;
+							</li>
+			                <li id="libienvenida">
+			                    <a href="#" class="lnkBack" title="bienvenida" style="color:#BE1622;"> Sobre la Escuela Lidera</a>
+			                </li>		         
+			                <li id="lidiccionario">
+			                    <a href="#" class="lnkBack" title="diccionario" style="color:#BE1622;">Diccionario  de competencias</a>
+			                </li>
+							<li id="liobjetivo">
+								<a href="#" class="lnkBack" title="objetivo" style="color:#BE1622;">Objetivo del proyecto</a>
+							</li>				                	
+							<li id="lipreguntas">
+								<a href="faqs.html" class="lnkBack" title="preguntas" style="color:#BE1622;">Preguntas y Respuestas</a>
+							</li>
+							<li id="lifiguras">
+								<a href="faqs.html" style="color:#BE1622;">Figuras Claves en el proyecto</a>
+							</li>										                						       
+			                <li id="liturol">
+			                    <a href="#" style="color:#BE1622;">Tu rol como protagonista</a>
+			                </li>
+			                <!--
+							<li id="licalendario">
+								<a href="#" style="color:#BE1622;">Calendario </a>
+							</li>
+							-->
+			                <li id="limisactividades" class="active">
+			                    <a href="#" style="color:#BE1622;">Mis actividades</a>
+			                </li>							
+						</ul>
+
+                    </div>
+
+
+</div>
+    
+</div>
+
+
+</div>
+
+</body>
+</html>

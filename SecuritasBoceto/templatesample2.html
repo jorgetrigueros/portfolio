@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <title></title>
+      <link rel="stylesheet" href="style.css" />
+ 
+      <script src="js/jquery-1.7.2.min.js"></script> 
+      <script src="js/jquery.tmpl.min.js"></script>
+
+       <script type="text/javascript">
+           $(document).ready(function () {
+               var movies = [
+                        { Name: "The Red Violin", ReleaseYear: "1998" },
+                        { Name: "Eyes Wide Shut", ReleaseYear: "1999" },
+                        { Name: "The Inheritance", ReleaseYear: "1976" }
+               ];
+               
+               //$.tmpl("movieTemplate", movies).appendTo("#movieList");
+               $('#movieTemplate').tmpl(movies).appendTo('#movieList');
+
+           });
+       </script>
+
+   </head>
+   <body>
+ 
+      <h1> Ejemplo template docs </h1>
+ 
+      <script id="movieTemplate" type="text/x-jquery-tmpl">
+         <li>
+            <!--<img src="${imgSource}" alt="${userName}" />-->
+            <h2> ${Name} </h2>
+            <p>  year: ${ReleaseYear} </p>
+ 
+<!--            {{if geo}}
+            <span>
+               ${geo}
+            </span>
+            {{/if}}-->
+         </li>
+      </script>
+ 
+      <ul id="movieList"></ul>
+ 
+      <script>
+      //   $.ajax({
+      //      type : 'GET',
+      //      dataType : 'jsonp',
+      //      url : 'http://search.twitter.com/search.json?q=chifliiiii',
+ 
+      //      success : function(tweets) {
+      //         var twitter = $.map(tweets.results, function(obj, index) {
+      //            return {
+      //               username : obj.from_user,
+      //               tweet : obj.text,
+      //               imgSource : obj.profile_image_url,
+      //               geo : obj.geo
+      //            };
+      //         });
+ 
+      //         $('#tweets').tmpl(twitter).appendTo('#twitter');
+      //      }
+      //});
+      </script>
+   </body>
+</html>
